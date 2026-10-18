@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Generator</title>
+    <link href="https://fonts.googleapis.com/css2?family=Honk&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Honk&family=Rubik+Glitch+Pop&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 400px;
+            height: auto;
+            border: 1px solid black;
+            line-height: 3rem;
+            margin: 50px auto;
+            text-align: center;
+        }
+        #btn{
+            padding: 5px;
+            border-radius: 5px;
+        }
+        #para{
+            font-size: 50px;
+        }
+        #head{
+            font-family: 'Honk', system-ui;
+            font-family: 'Rubik Glitch Pop', system-ui;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 id="head">OTP Generator</h2>
+        <p id="para">OTP will be displayed here</p>
+        <button id="btn" onclick="generate()">Generate OTP</button>
+    </div>
+    <script>
+        function generate() {
+            let num='0123456789';
+            let otp='';
+            for(let i=0;i<4;i++){
+            otp+=num[Math.floor(Math.random()*10)];
+            
+        }
+        document.getElementById('para').innerHTML=otp;
+        }
+        
+    </script>
+</body>
+</html>
